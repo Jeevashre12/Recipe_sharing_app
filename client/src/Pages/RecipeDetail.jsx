@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { AppContext } from '../context/AppContext';
 import ShareRecipe from '../components/ShareRecipe';
+
 import './Recipes.css';
 
 const RecipeDetail = () => {
@@ -48,6 +49,18 @@ const RecipeDetail = () => {
     };
     fetchRecipe();
   }, [id, backendUrl]);
+
+  // inject Botpress webchat core
+  const s1 = document.createElement('script');
+  s1.src = 'https://cdn.botpress.cloud/webchat/v3.4/inject.js';
+  s1.async = true;
+  document.body.appendChild(s1);
+
+  // inject your bot config/instance (deferred)
+  const s2 = document.createElement('script');
+  s2.src = 'https://files.bpcontent.cloud/2025/11/your-bot-config.js';
+  s2.async = true;
+  document.body.appendChild(s2);
 
   const getEmbedUrl = (url) => {
     if (!url) return null;

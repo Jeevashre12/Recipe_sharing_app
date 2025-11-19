@@ -1,0 +1,183 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Montserrat:wght@700&display=swap');
+
+:root {
+  --brand: #5a4a42;
+  --brand-dark: #48362f;
+  --surface: #ffffff;
+  --muted: #7a6b61;
+  --glass: rgba(90,74,66,0.06);
+  --shadow: 0 8px 28px rgba(36,30,24,0.06);
+}
+
+/* Page wrapper */
+.contact-page {
+  max-width: 920px;
+  margin: 140px auto 48px; /* space for fixed navbar */
+  background: linear-gradient(180deg, #fff, #fbfaf9);
+  border-radius: 12px;
+  padding: 36px;
+  box-shadow: var(--shadow);
+  border: 1px solid #efe6df;
+  font-family: 'Nunito', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--brand-dark);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Headings */
+.contact-page h2 {
+  margin: 0 0 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--brand);
+  font-size: 34px;
+  letter-spacing: 0.6px;
+}
+
+.contact-page p.contact-sub {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Form layout */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* Left column inputs */
+.contact-form .field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.contact-form label {
+  font-size: 15px;
+  color: var(--brand-dark);
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #e8e2db;
+  background: var(--surface);
+  font-size: 16px;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+  font-family: 'Nunito', sans-serif;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--brand);
+  box-shadow: 0 6px 18px rgba(90,74,66,0.08);
+}
+
+/* Right column (optional info / contact details) */
+.contact-side {
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(90,74,66,0.04), rgba(90,74,66,0.02));
+  border: 1px solid rgba(90,74,66,0.04);
+  font-size: 16px;
+  color: var(--brand-dark);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Actions */
+.contact-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.contact-actions button {
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(90,74,66,0.12);
+  transition: transform .12s ease, opacity .12s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.contact-actions button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.contact-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-secondary {
+  background: transparent;
+  color: var(--brand-dark);
+  border: 1px solid rgba(90,74,66,0.1);
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+/* Messages */
+.contact-error {
+  color: #b00020;
+  font-weight: 600;
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+.contact-success {
+  color: #0a7a4f;
+  font-weight: 600;
+  margin-left: 6px;
+  font-size: 15px;
+}
+
+/* Small helper text */
+.helper {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 920px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-side {
+    order: -1;
+  }
+  .contact-page {
+    margin: 120px 16px 32px;
+    padding: 24px;
+    font-size: 16px;
+  }
+  .contact-page h2 {
+    font-size: 28px;
+  }
+}
+
+/* Minor polish */
+.input-inline {
+  display: flex;
+  gap: 10px;
+}

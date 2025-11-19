@@ -1,0 +1,18 @@
+/* Basic styles for challenges (simple, tweak as desired) */
+.challenges-page { max-width: 980px; margin: 140px auto 60px; padding: 20px; font-family: 'Poppins', sans-serif; color: #5a4a42; }
+.challenges-header h1 { font-family: 'Great Vibes', serif; font-size: 34px; margin:0; color: #5a4a42; }
+.active-challenge { background:#fff; padding:16px; border-radius:10px; margin:12px 0; border:1px solid #efe6df; }
+.active-challenge .meta { display:flex; gap:12px; align-items:center; margin-top:10px; }
+.view-link { background: #5a4a42; color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:12px; margin-top:12px; }
+.challenge-card { background:#fff; padding:12px; border-radius:10px; border:1px solid #efe6df; }
+.challenge-card h4 { margin:0 0 6px; color:#5a4a42; }
+.detail-header h1 { color:#5a4a42; margin:0; }
+.submission-grid { display:grid; gap:10px; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); }
+.submission-card { padding:10px; background:#fff; border-radius:8px; border:1px solid #efe6df; color:#333; }
+.modal-overlay { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.4); z-index:2000; }
+.modal { background:#fff; padding:18px; border-radius:10px; width:420px; max-width:92%; }
+.modal label { display:block; margin:8px 0 6px; color:#5a4a42; font-weight:600; }
+.modal select, .modal textarea { width:100%; padding:10px; border-radius:8px; border:1px solid #e9e3dd; }
+.modal-actions { display:flex; justify-content:flex-end; gap:8px; margin-top:12px; }
+button.secondary { background:transparent; border:1px solid #ddd; padding:8px 12px; border-radius:8px; }

@@ -42,7 +42,9 @@ const Navbar = () => {
         <div className="nav-links">
           <NavLink to="/" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'} end>Home</NavLink>
           <NavLink to="/about" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>
+          <NavLink to="/contact" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Contact</NavLink>
           <NavLink to="/recipes" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Recipes</NavLink>
+          <NavLink to="/meal-planner" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Meal Planner</NavLink>
           {userData && (
             <NavLink to="/my-recipes" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Your Recipes</NavLink>
           )}

@@ -11,6 +11,8 @@ import AdminLogin from './Pages/AdminLogin';
 import AdminDashboard from './Pages/AdminDashboard';
 import EnterEmail from './Pages/EnterEmail';
 import MyRecipes from './Pages/MyRecipes';
+import Contact from './Pages/Contact';
+import MealPlanner from './Pages/MealPlanner';
 
 // Recipe-related components
 import RecipeCard from './components/RecipeCard';
@@ -48,6 +50,8 @@ const App = () => {
           <Route path='/admin/login' element={<AdminLogin />} />
           <Route path='/admin/dashboard' element={<AdminDashboard />} />
           <Route path='/enter-email' element={<EnterEmail />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path="/meal-planner" element={<MealPlanner />} />
         </Routes>
       </div>
     </AppContextProvider>
